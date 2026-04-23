@@ -1,7 +1,5 @@
 # peakalign
 
-# peakalign
-
 **Post-hoc peak correspondence for LC-MS metabolomics feature tables.**
 
 `peakalign` identifies which peaks are shared between two LC-MS feature tables and which are unique to each — without requiring raw data, software-specific formats, or manual inspection. It works on any CSV export from any peak-picking software.
