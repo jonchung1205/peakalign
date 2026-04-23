@@ -353,15 +353,6 @@ pytest tests/ -v
 
 ---
 
-## Citation
-
-If you use `peakalign` in published work, please cite:
-
-> peakalign: post-hoc peak correspondence for LC-MS metabolomics feature tables.
-> [manuscript in preparation]
-
----
-
 ## License
 
 MIT
