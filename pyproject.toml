@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peakalign"
+version = "0.1.0"
+description = "Format-agnostic LCMS feature table alignment"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["lcms", "metabolomics", "peak-alignment", "feature-table", "xcms", "mzmine", "skyline"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "openpyxl>=3.1",   # for to_excel()
+]
+
+[project.optional-dependencies]
+drift = ["scikit-learn>=1.3"]   # for polynomial RT drift correction
+dev = [
+    "pytest>=7.4",
+    "pytest-cov",
+    "scikit-learn>=1.3",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["peakalign*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
